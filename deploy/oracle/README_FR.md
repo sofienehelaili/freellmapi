@@ -29,7 +29,7 @@ Aucune action programmée ne déclenche la procédure d'installation toute seule
 ```bash
 git clone --depth 1 --branch setup/oracle-free-arm64 https://github.com/sofienehelaili/freellmapi.git ~/apps/freellmapi-oci
 cd ~/apps/freellmapi-oci
-git checkout --detach 232bef2ee200e8ebfab2c6ef9603aa0e5139617e
+# Le workflow privé vérifie les SHA Git des fichiers de déploiement avant exécution.
 bash deploy/oracle/install.sh
 ```
 
