@@ -27,7 +27,7 @@ if [ "$disk_bytes" -lt 100000000000 ]; then
   exit 0
 fi
 echo '=== Partition placement ==='
-lsblk -b -o NAME,START,SIZE,PARTN,FSTYPE,MOUNTPOINTS /dev/sda
+lsblk -b -o NAME,SIZE,PARTN,FSTYPE,MOUNTPOINTS /dev/sda
 start_root="$(cat /sys/class/block/sda1/start)"
 for partition in /sys/class/block/sda/sda[0-9]*; do
   [ -d "$partition" ] || continue
